@@ -1,0 +1,51 @@
+
+POST  http://localhost:5000/api/auth/register
+Content-Type:application/json
+
+{
+    "username":"nam",
+    "password":"admin"
+}
+
+###
+
+POST  http://localhost:5000/api/auth/login
+Content-Type:application/json
+
+{
+    "username":"vu",
+    "password":"admin"
+}
+
+###
+
+POST http://localhost:5000/api/posts
+Content-Type:application/json
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTVmMWJhZDBmMWM4ZjJmYzU1YzkzYzYiLCJpYXQiOjE2MzM2MjMwNzR9.viBf2pQeLL5Z8kUqedySSf5TmBgAuATHGEQH8XWXy0A
+
+{
+    "title":"shopee1",
+    "description":"abc",
+    "url":"shopee.com",
+    "status":"LEARNED"
+}
+
+### Thêm
+GET http://localhost:5000/api/posts
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTVmMWJhZDBmMWM4ZjJmYzU1YzkzYzYiLCJpYXQiOjE2MzM2MjMwNzR9.viBf2pQeLL5Z8kUqedySSf5TmBgAuATHGEQH8XWXy0A
+
+###
+PUT http://localhost:5000/api/posts/615f2026852260ef1526e22a
+Content-Type: application/json
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTVmMWJhZDBmMWM4ZjJmYzU1YzkzYzYiLCJpYXQiOjE2MzM2MjMwNzR9.viBf2pQeLL5Z8kUqedySSf5TmBgAuATHGEQH8XWXy0A
+
+
+{
+    "title":"Vue",
+    "description":"Vue js",
+    "url":"vue.org"
+}
+
+###
+DELETE http://localhost:5000/api/posts/615f2026852260ef1526e22a
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTVmMWJhZDBmMWM4ZjJmYzU1YzkzYzYiLCJpYXQiOjE2MzM2MjMwNzR9.viBf2pQeLL5Z8kUqedySSf5TmBgAuATHGEQH8XWXy0A
